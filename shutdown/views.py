@@ -25,5 +25,6 @@ listpc = [
 
 # Create your views here.
 def shutdown_it(request):
-    os.system(r"net rpc -S pc-it08 -U 'KVANTORIUM\foksha.as%P@ssw0rd' shutdown -t 1 -f")
+    for pc in listpc:
+        os.system(r"net rpc -S {} -U 'KVANTORIUM\foksha.as%P@ssw0rd' shutdown -t 1 -f".format(pc))
     return JsonResponse({"isShutDown" : True})
