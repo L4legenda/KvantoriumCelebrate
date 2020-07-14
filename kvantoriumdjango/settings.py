@@ -25,7 +25,7 @@ SECRET_KEY = '5d(#163i6)^+@6^7m8i3)_@#2n@a4n5t+($_6)pamde7*(dbxt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['dev.prospekt45.ru']
+ALLOWED_HOSTS = ['dev.prospekt45.ru', '127.0.0.1']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'usercelebrate',
     'userlist',
+    'shutdown',
 ]
 
 MIDDLEWARE = [
