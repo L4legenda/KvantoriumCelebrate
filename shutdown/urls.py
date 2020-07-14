@@ -4,4 +4,5 @@ from shutdown.views import *
 
 urlpatterns = [
     path('shutdown/it', shutdown_it),
+    path('shutdown/hitech', shutdown_hitech),
 ]
