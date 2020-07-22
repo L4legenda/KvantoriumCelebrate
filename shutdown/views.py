@@ -33,7 +33,8 @@ def shutdown_it(request):
 def shutdown_detail_it(request, pc):
     if pc < 10:
         pc = "0" + str(pc)
-    pc = "pc-it" + pc
+    pc = "pc-it" + str(pc)
+
     os.system(r"net rpc -S {0} -U 'KVANTORIUM\{1}%{2}' shutdown -t 1 -f".format(pc, admin.user, admin.password))
     return JsonResponse({"isShutDown": True})
 
